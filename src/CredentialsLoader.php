@@ -336,6 +336,6 @@ class BasicLogger
 {
     public function debug($message, array $context = array())
     {
-        fwrite(STDERR, rtrim($message) . "\n");
+        fwrite(STDERR, '[' . time() . '] ' . __METHOD__ . ': ' . rtrim($message) . "\n");
     }
 }

@@ -390,6 +390,7 @@ class GCECredentials extends CredentialsLoader implements
 
         // store this so we can retrieve it later
         $this->lastReceivedToken = $json;
+        $this->logTokenInfo($json);
 
         return $json;
     }
